@@ -1,4 +1,4 @@
-version: '3'
+version: '3.3'
 services:
   mysqldb:
     image: mysql:5.7
@@ -6,9 +6,11 @@ services:
     ports:
       - "3306:3306"
     environment:
-     MYSQL_ROOT_PASSWORD: admin
-     MYSQL_DATABASE: catalog
-
+      MYSQL_ROOT_PASSWORD: admin
+      MYSQL_DATABASE: catalog
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      
   rabbitmq:
     container_name: rabbitmq
     image: 'rabbitmq:management'
