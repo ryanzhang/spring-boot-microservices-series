@@ -151,7 +151,7 @@ services:
     container_name: shoppingcart-ui
     build: ./shoppingcart-ui
     ports:
-      - "8080:8080"
+      - "18080:8080"
       - "49797:8787"
     depends_on:
       - config-server
