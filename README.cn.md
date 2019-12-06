@@ -60,11 +60,13 @@ Ex: `spring-boot-microservices-series> docker-compose up -d catalog-service --bu
     * Ports: 8788:8788
     * URL: http://localhost:8788/hystrix
 
+
 * catalog-service:
     * hostname: catalog-service
     * Ports: 18181:8181
     * Actuator URL: http://localhost:18181/actuator 
     * Service URL: http://localhost:18181/api/products
+    * hystrix stream: http://192.168.71.174:18181/actuator/hystrix.stream (不能使用localhost)
     
 * inventory-service   
     * hostname: inventory-service
